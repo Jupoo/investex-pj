@@ -1,5 +1,0 @@
-$em-baseline: 16px;
-
-@function em($value) {
-    @return #{$value / $em-baseline}em;
-}
