@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+<section>
+	<div class="page__content-inner">
+		<div class="row row--padd col-bottom">
+			<div class="col-6">
+				<div class="heading">Statisctics</div>
+				<nav class="menu-filter">
+					<ul class="menu-filter__wrap">
+						<li class="menu-filter__item menu-filter--current"><a href="">Today</a></li>
+						<li class="menu-filter__item"><a href="">Yesterday</a></li>
+						<li class="menu-filter__item"><a href="">This week</a></li>
+						<li class="menu-filter__item"><a href="">This month</a></li>
+						<li class="menu-filter__item"><a href="">Custom</a></li>
+					</ul>
+				</nav>
+
+				<div class="col-top-min">
+					<div class="form__flex">
+						<div class="form__field form--field-inline">
+							<div class="form__title">From</div>
+							<div class="form__input-wrap">
+								<input placeholder="Choose date" name="" value="" type="text" class="form__input" />
+							</div>
+						</div>
+						<div class="form__field form--field-inline">
+							<div class="form__title">To</div>
+							<div class="form__input-wrap">
+								<input placeholder="Choose date" name="" value="" type="text" class="form__input" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="table col-top-micro">
+					<div class="table__line table--header">
+						<div class="table__cell table--cell-stat1 table--cell-header-left">&nbsp;</div>
+						<div class="table__cell table--cell-stat2">Yours</div>
+						<div class="table__cell table--cell-stat3">Best sales</div>
+					</div>
+					<div class="table__body">
+						<div class="table__line">
+							<div class="table__cell table--cell-stat1 table--cell-header-left">Leads</div>
+							<div class="table__cell table--cell-stat2">5 / 10</div>
+							<div class="table__cell table--cell-stat3">5 / 20</div>
+						</div>
+						<div class="table__line">
+							<div class="table__cell table--cell-stat1 table--cell-header-left">New clients</div>
+							<div class="table__cell table--cell-stat2">3</div>
+							<div class="table__cell table--cell-stat3">5</div>
+						</div>
+						<div class="table__line">
+							<div class="table__cell table--cell-stat1 table--cell-header-left">Deposits</div>
+							<div class="table__cell table--cell-stat2">10 / $2,000</div>
+							<div class="table__cell table--cell-stat3">5 / $5,000</div>
+						</div>
+						<div class="table__line">
+							<div class="table__cell table--cell-stat1 table--cell-header-left">Withdrawals</div>
+							<div class="table__cell table--cell-stat2">4 / $500</div>
+							<div class="table__cell table--cell-stat3">2 / $200</div>
+						</div>
+						<div class="table__line">
+							<div class="table__cell table--cell-stat1 table--cell-header-left">Trading volume</div>
+							<div class="table__cell table--cell-stat2">10</div>
+							<div class="table__cell table--cell-stat3">20</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="heading">Latest events</div>
+				{% render_table table %}
+			</div>
+		</div>
+		<div class="heading heading--min">Instruments</div>
+		<div class="row row--padd">
+			<div class="col-6">
+				<div class="form__field">
+					<div class="form__title">My link</div>
+					<div class="form__input-wrap">
+						<input placeholder="My link" name="" value="a href = ‘https://clicks.ppiipaaffilliates.com/afggfhc…" type="text" class="form__input" disabled="disabled" />
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="form__field">
+					<div class="form__title">My code</div>
+					<div class="form__input-wrap">
+						<input placeholder="My code" name="" value="wewqeqew" type="text" class="form__input" disabled="disabled" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

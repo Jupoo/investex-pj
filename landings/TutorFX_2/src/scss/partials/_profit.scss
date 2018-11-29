@@ -1,0 +1,43 @@
+.profit {
+	background: url("#{$img-path}profits-bg.jpg") repeat-y center top;
+
+	&__bg {
+		background: #45acbd url("#{$img-path}svg/profits-desktop.svg") no-repeat center top;
+		background-size: auto 100%;
+		@include rem(height, 607px);
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.profit {
+
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.profit {
+		&__bg {
+		  	@include rem(height, 456px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.profit {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.profit {
+		&__bg {
+			background: url("#{$img-path}svg/profits-desktop.svg") no-repeat center bottom;
+			@include rem(height, 360px);
+			background-size: auto 80%;
+		}
+	}
+}

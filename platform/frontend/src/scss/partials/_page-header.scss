@@ -1,0 +1,79 @@
+.page-header {
+	width: 100%;
+	background: #fff;
+	@include rem(padding, 45px 0px);
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__logo {
+		@include rem(width, 160px);
+		flex-grow: 0;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__menu {
+		flex-grow: 1;
+		text-align: right;
+	}
+
+	&__menu-item {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin, 0px 25px);
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			@include rem(margin-right, 50px);
+		}
+
+		& a {
+			display: block;
+			@include rem(font-size, 16px);
+			@include rem(line-height, 38px);
+			white-space: nowrap;
+		}
+	}
+
+	&__btn {
+		flex-grow: 0;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.page-header {
+
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.page-header {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.page-header {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.page-header {
+
+	}
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "model": "clients.tag",
+    "pk": 1,
+    "fields": {
+      "order": 0,
+      "title": "New"
+    }
+  },
+  {
+    "model": "clients.tag",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "title": "Contacted"
+    }
+  },
+  {
+    "model": "clients.tag",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "title": "Funded"
+    }
+  },
+  {
+    "model": "clients.tag",
+    "pk": 4,
+    "fields": {
+      "order": 3,
+      "title": "Unfunded"
+    }
+  },
+  {
+    "model": "clients.tag",
+    "pk": 5,
+    "fields": {
+      "order": 4,
+      "title": "VIP"
+    }
+  }
+]

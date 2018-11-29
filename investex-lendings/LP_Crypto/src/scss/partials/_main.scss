@@ -1,0 +1,96 @@
+.main {
+	@include rem(padding-top, 50px);
+	background: #fff no-repeat url("#{$img-path}svg/pattern-header.svg") right top;
+
+	&__left {
+		width: 410px;
+		max-width: 100%;
+	}
+
+	&__logo {
+		display: block;
+		@include rem(margin-bottom, 50px);
+
+		& img {
+			@include rem(width, 195px);
+		}
+	}
+
+	&__header {
+		font-weight: bold;
+		@include rem(font-size, 36px);
+		@include rem(line-height, 44px);
+		@include rem(margin-bottom, 20px);
+	}
+
+	&__text {
+		@include rem(font-size, 22px);
+		@include rem(line-height, 34px);
+		color: $color-grey;
+		@include rem(margin-bottom, 40px);
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.main {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.main {
+		&__header {
+			font-weight: bold;
+			@include rem(font-size, 30px);
+			@include rem(line-height, 39px);
+		}
+
+		&__text {
+			@include rem(font-size, 18px);
+			@include rem(line-height, 25px);
+		}
+
+		&__logo {
+			& img {
+				@include rem(width, 167px);
+			}
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.main {
+		@include rem(padding-top, 30px);
+
+		&__left {
+			text-align: center;
+			width: auto;
+		}
+
+		&__text {
+			@include rem(margin-bottom, 30px);
+		}
+
+		&__logo {
+			& img {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.main {
+		background-position: right -13px;
+
+		&__logo {
+			& img {
+				@include rem(width, 128px);
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+.traders {
+  	color: #fff;
+	display: flex;
+	align-items: center;
+
+	&__img {
+	  	@include rem(min-width, 140px);
+	  	@include rem(width, 140px);
+
+	  	& img {
+			width: 100%;
+		}
+	}
+
+  	&__info {
+	  	@include rem(padding-left, 35px);
+		width: 100%;
+	}
+
+  	&__title {
+	  	font-family: $font-ping-semibold;
+	  	@include rem(font-size, 23px);
+	  	@include rem(line-height, 29px);
+	}
+
+  	&__count {
+		font-family: $font-bold;
+		@include rem(font-size, 53px);
+		@include rem(line-height, 57px);
+	  	color: $color-yellow;
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.traders {
+		&__img {
+			@include rem(min-width, 110px);
+			@include rem(width, 110px);
+		}
+
+		&__count {
+			@include rem(font-size, 49px);
+			@include rem(line-height, 53px);
+		}
+
+		&__info {
+		  	@include rem(padding-left, 20px);
+		}
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.traders {
+	  	display: block;
+
+		&__img {
+		  	margin: 0 auto;
+		}
+
+		&__info {
+		  	text-align: center;
+		  	@include rem(margin-top, 20px);
+		  	padding-left: 0;
+		}
+
+		&__count {
+			@include rem(font-size, 46px);
+			@include rem(line-height, 50px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.traders {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.traders {
+		display: flex;
+
+		&__info {
+			@include rem(padding-left, 30px);
+			text-align: left;
+			@include rem(margin-top, 0px);
+		}
+
+		&__count {
+			@include rem(font-size, 49px);
+			@include rem(line-height, 53px);
+		}
+	}
+}

@@ -1,0 +1,132 @@
+.conditions {
+	&__line {
+		display: flex;
+		background: #fff;
+		@include shadow();
+		@include rem(height, 84px);
+		@include rem(padding, 0px 30px);
+		margin-bottom: 2px;
+		align-items: center;
+		transition: all $transition-speed ease;
+	}
+
+	&--header {
+		@include rem(height, 34px);
+	}
+
+	&__cell {
+		font-family: $font-heavy;
+		font-weight: bold;
+		@include rem(padding, 0px 20px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 36px);
+		white-space: nowrap;
+		color: $color-blue;
+		@include rem(width, 105px);
+		@include rem(min-width, 105px);
+		flex-grow: 1;
+
+		&:first-child {
+			flex-grow: 3;
+		}
+
+		&:last-child {
+			flex-grow: 0;
+		}
+	}
+
+	&--red {
+		color: $color-red;
+	}
+
+	&--title {
+		font-family: $font-medium;
+		font-weight: normal;
+		color: $color-grey-dark;
+	}
+
+	&--header &__cell {
+		color: $color-blue;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 34px);
+	}
+
+	&--line-forex-btn {
+		justify-content: center;
+		@include rem(height, 56px);
+	}
+
+	&__link {
+		display: inline-block;
+		vertical-align: top;
+		color: $color-red;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 24px);
+		font-family: $font-reg;
+		font-weight: bold;
+		transition: all $transition-speed ease;
+		text-transform: uppercase;
+		opacity: 0.7;
+
+		&:hover {
+			color: $color-red;
+			opacity: 1;
+		}
+	}
+
+	&--cell-spread {
+		color: $color-base;
+		@include rem(width, 80px);
+		@include rem(min-width, 80px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.conditions {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.conditions {
+		&__cell {
+			@include rem(padding, 0px 5px);
+			@include rem(font-size, 14px);
+			@include rem(width, 68px);
+			@include rem(min-width, 68px);
+		}
+
+		&__line {
+			@include rem(padding, 0px 20px);
+		}
+
+		&__link {
+			@include rem(font-size, 16px);
+		}
+
+		&--cell-spread {
+			color: $color-base;
+			@include rem(width, 50px);
+			@include rem(min-width, 50px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.conditions {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.conditions {
+		&__line {
+			@include rem(padding, 0px 10px);
+		}
+	}
+}

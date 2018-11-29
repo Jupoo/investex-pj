@@ -1,0 +1,100 @@
+.pseudo-select {
+    position: relative;
+    text-align: left;
+  
+    &__text {
+        @include rem(font-size, 15px);
+        @include rem(line-height, 38px);
+        @include rem(height, 40px);
+        @include rem(padding-left, 10px);
+        @include rem(padding-right, 40px);
+        cursor: pointer;
+        overflow: hidden;
+        border: solid 1px $color-border-form;
+        white-space: nowrap;
+        background: #fff;
+        border-radius: $border-radius-base;
+        //position: relative;
+        //z-index: 2;
+        color: $color-grey-dark;
+        text-overflow: ellipsis;
+    }
+
+    &--active &__text {
+        border-radius: $border-radius-base $border-radius-base 0px 0px;
+        color: $color-red;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        @include rem(width, 40px);
+        @include rem(font-size, 22px);
+        @include rem(line-height, 40px);
+        color: $color-red;
+        text-align: center;
+        z-index: 1;
+        cursor: pointer;
+    }
+  
+    &__list {
+        width: 100%;
+        position: absolute;
+        @include rem(top, 40px);
+        left: 0px;
+        background: lighten($color-grey-extralight,0.5%);
+        border: solid 1px $color-border-form;
+        border-top: none;
+        @include rem(max-height, 180px);
+        overflow: auto;
+        border-radius: 0px 0px $border-radius-base $border-radius-base;
+        z-index: 3;
+        display: none;
+    }
+  
+    &__option {
+        @include rem(font-size, 15px);
+        @include rem(line-height, 21px);
+        @include rem(padding, 7px 10px);
+        cursor: pointer;
+        color: $color-grey-dark;
+        border-bottom: solid 1px lighten($color-border-form,10%);
+        transition: all $transition-speed ease;
+
+        &:hover {
+            background: darken($color-grey-extralight,1.5%);
+            color: darken($color-grey-dark,10%);
+        }
+
+        &.current {
+            background: darken($color-grey-extralight,4%);
+            color: darken($color-grey-dark,10%);
+        }
+
+        &:last-child {
+            border-radius: 0px 0px $border-radius-base $border-radius-base;
+            border-bottom: none;
+        }
+    }
+
+    &--option-title {
+        @include rem(font-size, 15px);
+        @include rem(line-height, 21px);
+        @include rem(padding, 7px 10px);
+        //font-family: $font-medium;
+        //background: darken($color-grey-extralight,1%);
+        //color: darken($color-grey-dark,10%);
+        color: $color-grey-dark;
+        border-bottom: solid 1px lighten($color-border-form,10%);
+    }
+
+    &--option-lev2 {
+        @include rem(padding-left, 30px);
+    }
+  
+    &__real {
+        display: none;
+    }
+}

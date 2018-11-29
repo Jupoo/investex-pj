@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	min-width: 1200px;
+}
+
+body {
+	background-color: $bg-base;
+	color:  $color-base;
+	font-family: $font-family-base;
+	overflow-y: scroll;
+
+	&.overflow-no {
+		overflow-x: hidden;
+    	overflow-y: hidden;
+	}
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	transition: color $transition-speed ease;
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+.marg-l {
+	margin-left: $grid-gutter-width-base;
+}
+
+.marg-r {
+	margin-right: $grid-gutter-width-base;
+}
+
+.marg-l-min {
+	margin-left: ($grid-gutter-width-base / 2);
+}
+
+.marg-l-micro {
+	margin-left: ($grid-gutter-width-base / 3);
+}
+
+.marg-r-min {
+	margin-right: ($grid-gutter-width-base / 2);
+}
+
+.marg-r-micro {
+	margin-right: ($grid-gutter-width-base / 3);
+	position: relative;
+}
+
+.none {
+	display: none;
+}
+
+.block {
+	display: block;
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+
+}
+
+//------------------- < 1200 > 992 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) and (min-width: ($width-content-lg)) {
+    .marg-l-min-lg-reset-only {
+		margin-left: auto;
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.marg-l {
+		margin-left: $grid-gutter-width-tablet;
+	}
+
+	.marg-r {
+		margin-right: $grid-gutter-width-tablet;
+	}
+
+	.marg-r-md-micro {
+		margin-right: 10px;
+	}
+
+	.marg-l-min-md-reset {
+		margin-left: auto;
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	html, body {
+		min-width: $width-content-xs;
+	}
+
+	body {
+
+	}
+
+	.marg-l {
+		margin-left: $grid-gutter-width-mobile;
+	}
+
+	.marg-r {
+		margin-right: $grid-gutter-width-mobile;
+	}
+
+	.marg-l-min-sm-reset {
+		margin-left: auto;
+	}
+
+	.marg-r-min-sm-reset {
+		margin-right: auto;
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.marg-l-min-xsm-reset {
+		margin-left: auto;
+	}
+
+	.marg-r-min-xsm-reset {
+		margin-right: auto;
+	}
+}

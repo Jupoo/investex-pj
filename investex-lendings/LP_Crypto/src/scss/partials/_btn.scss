@@ -1,0 +1,109 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+	border: none;
+	font-family: $font-reg;
+	@include rem(height, 74px);
+	@include rem(font-size, 24px);
+	@include rem(line-height, 74px);
+	@include rem(padding, 0px 45px);
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	border-radius: $border-radius-base;
+	white-space: nowrap;
+	text-transform: uppercase;
+	max-width: 100%;
+	transition: all $transition-speed ease;
+  	font-weight: bold;
+	background: $color-red;
+  
+	&:hover {
+		background: darken($color-red,5%);
+		text-decoration: none;
+		color: #fff;
+	}
+
+	&--form {
+		@include rem(height, 86px);
+		@include rem(font-size, 30px);
+		@include rem(line-height, 86px);
+		@include rem(padding, 0px 55px);
+		background: $color-yellow;
+		color: #000;
+
+		&:hover {
+			background: darken($color-yellow,5%);
+			text-decoration: none;
+			color: #000;
+		}
+	}
+
+	&--fill {
+		width: 100%;
+		padding: 0px;
+	}
+
+	&--waiting {
+		transition: all 0s ease;
+		background: darken($color-yellow,5%) url("#{$img-path}svg/loader.svg") no-repeat center;
+		color: rgba(#000,0);
+		font-size: 0;
+
+		&:hover {
+			background: darken($color-yellow,5%) url("#{$img-path}svg/loader.svg") no-repeat center;
+			color: rgba(#000,0);
+			font-size: 0;
+		}
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.btn {
+		@include rem(height, 56px);
+		@include rem(line-height, 56px);
+		@include rem(padding, 0px 40px);
+		@include rem(font-size, 18px);
+
+		&--form {
+			@include rem(height, 58px);
+			@include rem(font-size, 21px);
+			@include rem(line-height, 58px);
+			@include rem(padding, 0px 45px);
+		}
+
+		&--fill {
+			padding: 0px;
+		}
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.btn {
+
+	}
+}

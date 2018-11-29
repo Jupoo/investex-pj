@@ -1,0 +1,156 @@
+.tags {
+	font-family: $font-reg;
+	display: inline-block;
+	vertical-align: top;
+	@include rem(padding, 4px 10px);
+	@include rem(line-height, 24px);
+
+	&__add {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(width, 24px);
+		@include rem(height, 24px);
+		background: $color-grey-light;
+		color: #fff;
+		text-align: center;
+		border-radius: 50%;
+		position: relative;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			background: $color-red;
+		}
+	}
+
+	&__add-icon {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 24px);
+	}
+
+	&__add-hidden {
+		display: none;
+		position: absolute;
+		@include rem(top, 24px);
+		@include rem(padding-top, 6px);
+		left: 0;
+		z-index: 1;
+		background: none;
+	}
+
+	&__add-list {
+		background: #fff;
+		color: $color-base;
+		@include rem(font-size, 13px);
+		@include rem(line-height, 17px);
+		text-align: left;
+		@include shadow-box();
+		border-radius: $border-radius-input;
+		@include rem(padding, 6px 15px);
+		font-weight: normal;
+	}
+
+	&__add-item {
+		white-space: nowrap;
+		@include rem(padding, 4px 0px);
+
+		&:hover {
+			color: $color-blue;
+			text-decoration: underline;
+		}
+	}
+
+	&__add:hover &__add-hidden {
+		display: block;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		display: inline-block;
+		vertical-align: top;
+		color: #000;
+		border: none;
+		font-family: $font-reg;
+		font-weight: bold;
+		@include rem(height, 24px);
+		@include rem(font-size, 11px);
+		@include rem(line-height, 24px);
+		@include rem(padding, 0px 15px);
+		background: $color-blue;
+		text-transform: uppercase;
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 15px;
+		white-space: nowrap;
+		max-width: 100%;
+		transition: all $transition-speed ease;
+		position: relative;
+
+		&:hover {
+			background: $color-grey-lighter;
+			text-decoration: none;
+			color: $color-grey;
+		}
+	}
+
+	&__del {
+		position: absolute;
+		top: 0;
+		right: 12px;
+		width: 22px;
+		height: 100%;
+		background-image: linear-gradient(to left, $color-grey-lighter, rgba($color-grey-lighter, 0));
+		opacity: 0;
+		transition: all 0s ease;
+	}
+
+	&__del-icon {
+		position: relative;
+		right: -10px;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 24px);
+		color: $color-grey-light;
+		transition: all $transition-speed ease;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-grey;
+		}
+	}
+
+	&__item:hover &__del{
+		opacity: 1;
+		transition: all $transition-speed*2 ease;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.tags {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.tags {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.tags {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.tags {
+
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "landproject",
+  "description": "land gulp project",
+  "main": "index.js",
+  "authors": [
+    "WebDesigner Jupo"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "normalize.css#^7.0.0"
+  }
+}

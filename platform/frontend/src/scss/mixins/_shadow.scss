@@ -1,0 +1,11 @@
+@mixin shadow() {
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);;
+}
+
+@mixin shadow-btn() {
+  box-shadow: 0 10px 30px -5px rgba(10, 15, 50, 0.5);
+}
+
+@mixin shadow-form() {
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}

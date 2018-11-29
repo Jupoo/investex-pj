@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Investex</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/libs.min.css' %}" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}" media="screen" />
+    </head>
+    <body>
+        <div class="page">
+            {% include 'partials/sidebar.html' %}
+
+            <main class="page__content">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+
+        <script type="text/javascript" src="{% static 'js/libs.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/scripts.min.js' %}"></script>
+    </body>
+</html>

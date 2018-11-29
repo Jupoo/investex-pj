@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+<section>
+	<div class="page__content-inner">
+    	<div class="heading">Events</div>
+
+		<div class="row">
+			<div class="col-4">
+				<nav class="menu-filter">
+					<ul class="menu-filter__wrap">
+						<li class="menu-filter__item menu-filter--current"><a href="">Today</a></li>
+						<li class="menu-filter__item"><a href="">Yesterday</a></li>
+						<li class="menu-filter__item"><a href="">Custom</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		{% render_table table %}
+	</div>
+</section>
+{% endblock %}

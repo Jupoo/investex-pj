@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="69" viewBox="0 0 172 69">
+    <defs>
+        <circle id="a" cx="34.5" cy="34.5" r="34.5"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#E04A36" d="M-70 998h1280V-84H-70z"/>
+        <text fill="#FFF" font-family="DINCondensed-Bold, DIN Condensed" font-size="37" font-style="condensed" font-weight="bold">
+            <tspan x="86" y="48">TutorFX</tspan>
+        </text>
+        <g>
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <use fill="#FFF" xlink:href="#a"/>
+            <path fill="#E04A36" fill-rule="nonzero" d="M18.32 36.07L.126 56-3 52.574 18.32 29.22l13.35 14.626L48.873 25 52 28.426l-20.33 22.27z" mask="url(#b)"/>
+            <path fill="#E04A36" d="M58 20v20L38 20z" mask="url(#b)"/>
+        </g>
+    </g>
+</svg>

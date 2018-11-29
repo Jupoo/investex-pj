@@ -1,0 +1,36 @@
+.page-footer {
+	@include rem(font-size, 13px);
+	@include rem(line-height, 17px);
+	@include rem(padding-bottom, 90px);
+  	color: $color-grey;
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.page-footer {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.page-footer {
+		@include rem(padding-bottom, 75px);
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.page-footer {
+		text-align: center;
+		@include rem(padding-bottom, 60px);
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.page-footer {
+		@include rem(padding-bottom, 50px);
+	}
+}

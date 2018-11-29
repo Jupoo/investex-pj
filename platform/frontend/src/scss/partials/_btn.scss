@@ -1,0 +1,97 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	font-family: $font-black;
+	font-weight: bold;
+	text-transform: uppercase;
+	max-width: 100%;
+	@include rem(font-size, 16px);
+	@include rem(line-height, 54px);
+	@include rem(height, 54px);
+	@include rem(padding, 0px 40px);
+	color: #fff;
+	background: $color-green;
+	border: solid 1px $color-green;
+	border-radius: $border-radius-btn;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	white-space: nowrap;
+	transition: all $transition-speed ease;
+
+	&:hover {
+		background: darken($color-green,5%);
+		text-decoration: none;
+		color: #fff;
+	}
+
+	&--border {
+		color: $color-green;
+		background: none;
+		border: solid 1px $color-green;
+
+		&:hover {
+			background: $color-green;
+			color: #fff;
+		}
+	}
+
+	&--fill {
+		width: 100%;
+		padding: 0px;
+	}
+
+	&--blue {
+		color: #fff;
+		background: $color-blue-dark;
+		border: solid 1px $color-blue-dark;
+		@include shadow-btn();
+
+		&:hover {
+			background: lighten($color-blue-dark,5%);
+			color: #fff;
+		}
+	}
+
+	&--min {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 38px);
+		@include rem(height, 38px);
+		@include rem(padding, 0px 20px);
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.btn {
+
+	}
+}

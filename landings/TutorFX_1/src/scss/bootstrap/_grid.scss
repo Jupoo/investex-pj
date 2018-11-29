@@ -1,0 +1,596 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  //@include make-container();
+  //@include make-container-max-widths();
+  width: 100%;
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+/*.container-fluid {
+  @include make-container();
+}*/
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+    @include make-row();
+    //justify-content: space-around;
+
+    &--vert-center {
+        align-items: center;
+    }
+
+    &--vert-bottom {
+        align-items: flex-end;
+    }
+
+    // Remove the negative margin from default .row, then the horizontal padding
+    // from all immediate children columns (to prevent runaway style inheritance).
+    &--no-padd {
+        margin-right: 0;
+        margin-left: 0;
+
+        > .col,
+        > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &--padd-min {
+        margin-right: -10px;
+        margin-left: -10px;
+
+        > .col,
+        > [class*="col-"] {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    &--padd-micro {
+        margin-right: -5px;
+        margin-left: -5px;
+
+        > .col,
+        > [class*="col-"] {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }
+}
+
+.col-onesize {
+    height: 100%;
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+/*.content-main {
+  @include make-col-ready();
+
+  @media (max-width: 32em) {
+    @include make-col(6);
+  }
+  @media (min-width: 32.1em) {
+    @include make-col(8);
+  }
+}
+
+.content-secondary {
+  @include make-col-ready();
+
+  @media (max-width: 32em) {
+    @include make-col(6);
+  }
+  @media (min-width: 32.1em) {
+    @include make-col(4);
+  }
+}*/
+
+.col-separat-right {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 1px;
+        height: 100%;
+        background: $color-border;
+    }
+}
+
+.col-lg-visiable,
+.col-md-visiable,
+.col-sm-visiable,
+.col-xsm-visiable {
+    display: none !important;
+}
+
+//---------------- POS
+.pos-center {
+	text-align: center;
+}
+
+.pos-right {
+	text-align: right;
+}
+
+.pos-left {
+	text-align: left;
+}
+//---------------- POS
+
+//---------------- BOTTOM
+.col-bottom {
+    @include rem(margin-bottom, 40px);
+}
+
+.col-bottom-min {
+    @include rem(margin-bottom, 20px);
+}
+
+.col-bottom-micro {
+  @include rem(margin-bottom, 10px);
+}
+//---------------- BOTTOM
+
+//---------------- TOP
+.col-top-fix {
+    @include rem(margin-top, 40px);
+}
+
+.col-top {
+    @include rem(margin-top, 40px);
+}
+
+.col-top-min {
+    @include rem(margin-top, 20px);
+}
+
+.col-top-micro {
+  @include rem(margin-top, 10px);
+}
+//---------------- TOP
+
+.col-padd {
+    @include rem(padding, 30px);
+}
+
+.col-padd-normal {
+    @include rem(padding, 20px);
+}
+
+.col-padd-min {
+    @include rem(padding, 15px);
+}
+
+.col-padd-micro {
+    @include rem(padding, 10px);
+}
+
+.col-padd-top {
+    @include rem(padding-top, 30px);
+}
+
+.col-padd-bottom {
+    @include rem(padding-bottom, 30px);
+}
+
+.col-padd-left {
+    @include rem(padding-left, 30px);
+}
+
+.col-padd-right {
+    @include rem(padding-right, 30px);
+}
+
+.col-sm-visiable-only {
+    display: none !important;
+}
+
+.col-sm-visiable-inline {
+    display: none !important;
+}
+
+.col-full {
+    width: 100%;
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+    .col-lg-visiable {
+        display: block !important;
+    }
+
+    .col-lg-visiable-inline {
+        display: inline-block !important;
+    }
+
+    .col-lg-hidden {
+        display: none !important;
+    }
+
+    .col-lg-full {
+        width: 100%;
+    }
+
+    //---------------- POS
+    .pos-lg-center {
+        text-align: center;
+    }
+
+    .pos-lg-right {
+        text-align: right;
+    }
+
+    .pos-lg-left {
+        text-align: left;
+    }
+    //---------------- POS
+
+    //---------------- BOTTOM
+    .col-lg-bottom {
+		@include rem(margin-bottom, 40px);
+	}
+
+    .col-lg-bottom-min {
+		@include rem(margin-bottom, 20px);
+	}
+
+    .col-lg-bottom-micro {
+        @include rem(margin-bottom, 10px);
+    }
+    //---------------- BOTTOM
+
+    //---------------- TOP
+    .col-lg-top {
+		@include rem(margin-top, 40px);
+	}
+
+    .col-lg-top-min {
+		@include rem(margin-top, 20px);
+	}
+    //---------------- TOP
+
+    .col-lg-padd-none {
+        padding: 0;
+    }
+
+    .col-lg-separat-right-none {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+//------------------- < 1200 > 992 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) and (min-width: ($width-content-lg)) {
+    .col-lg-full-only {
+        width: 100%;
+    }
+
+    .col-lg-top-micro-only {
+        @include rem(margin-top, 10px);
+    }
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+    .col-md-full {
+        width: 100%;
+    }
+
+    .col-md-visiable {
+        display: block !important;
+    }
+
+    .col-md-visiable-inline {
+        display: inline-block !important;
+    }
+
+    .col-md-hidden {
+        display: none !important;
+    }
+
+    //---------------- POS
+    .pos-md-center {
+        text-align: center;
+    }
+
+    .pos-md-right {
+        text-align: right;
+    }
+
+    .pos-md-left {
+        text-align: left;
+    }
+    //---------------- POS
+
+    //---------------- BOTTOM
+	.col-md-bottom {
+		@include rem(margin-bottom, 40px);
+	}
+
+    .col-md-bottom-min {
+		@include rem(margin-bottom, 20px);
+	}
+
+    .col-md-bottom-micro {
+        @include rem(margin-bottom, 10px);
+    }
+    //---------------- BOTTOM
+
+    //---------------- TOP
+    .col-md-top {
+		@include rem(margin-top, 40px);
+	}
+
+    .col-md-top-min {
+		@include rem(margin-top, 20px);
+	}
+
+    .col-md-top-micro {
+        @include rem(margin-top, 10px);
+    }
+    //---------------- TOP
+
+    .col-md-padd-none {
+        padding: 0;
+    }
+
+    .col-md-separat-right-none {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+    .pos-lg-center-only {
+        text-align: center;
+    }
+}
+
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+    .col-sm-visiable {
+        display: block !important;
+    }
+
+    .col-sm-visiable-only {
+        display: block !important;
+    }
+
+    .col-sm-hidden-only {
+        display: none !important;
+    }
+
+    .col-sm-visiable-inline {
+        display: inline-block !important;
+    }
+
+    .col-sm-hidden {
+        display: none !important;
+    }
+
+    .col-sm-full {
+        width: 100%;
+    }
+
+    .row--sm-vert-center {
+        align-items: center;
+    }
+
+    //---------------- POS
+    .pos-sm-center {
+        text-align: center;
+    }
+
+    .pos-sm-right {
+        text-align: right;
+    }
+
+    .pos-sm-left {
+        text-align: left;
+    }
+    //---------------- POS
+
+    //---------------- BOTTOM
+    .col-sm-bottom {
+		@include rem(margin-bottom, 30px);
+	}
+
+    .col-bottom-min {
+		@include rem(margin-bottom, 15px);
+	}
+
+    .col-lg-bottom-min {
+		@include rem(margin-bottom, 15px);
+	}
+
+    .col-md-bottom-min {
+		@include rem(margin-bottom, 15px);
+	}
+
+    .col-sm-bottom-min {
+		@include rem(margin-bottom, 15px);
+	}
+
+    .col-bottom {
+        @include rem(margin-bottom, 30px);
+    }
+
+    .col-lg-bottom {
+		@include rem(margin-bottom, 30px);
+	}
+
+    .col-md-bottom {
+		@include rem(margin-bottom, 30px);
+	}
+
+    .col-sm-bottom-micro {
+        @include rem(margin-bottom, 10px);
+    }
+    //---------------- BOTTOM
+
+    //---------------- TOP
+    .col-sm-top {
+		@include rem(margin-top, 30px);
+	}
+
+    .col-top-min {
+		@include rem(margin-top, 15px);
+	}
+
+    .col-lg-top-min {
+		@include rem(margin-top, 15px);
+	}
+
+    .col-md-top-min {
+		@include rem(margin-top, 15px);
+	}
+
+    .col-sm-top-min {
+		@include rem(margin-top, 15px);
+	}
+
+    .col-top {
+        @include rem(margin-top, 30px);
+    }
+
+    .col-lg-top {
+		@include rem(margin-top, 30px);
+	}
+
+    .col-md-top {
+		@include rem(margin-top, 30px);
+	}
+
+    .col-sm-top-micro {
+        @include rem(margin-top, 10px);
+    }
+
+    .col-sm-top-0 {
+        margin-top: 0px;
+    }
+    //---------------- TOP
+
+    .col-sm-padd-none {
+        padding: 0;
+    }
+
+    .col-sm-separat-right-none {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+    .col-sm-visiable-only {
+        display: none !important;
+    }
+
+    .col-sm-hidden-only {
+        display: block !important;
+    }
+
+    .row-xsm-center {
+        justify-content: center;
+    }
+
+    .col-xsm-visiable {
+        display: block !important;
+    }
+
+    .col-xsm-visiable-inline {
+        display: inline-block !important;
+    }
+
+    .col-xsm-hidden {
+        display: none !important;
+    }
+
+    .col-xsm-full {
+        width: 100%;
+    }
+
+    //---------------- POS
+    .pos-xsm-center {
+        text-align: center;
+    }
+
+    .pos-xsm-right {
+        text-align: right;
+    }
+
+    .pos-xsm-left {
+        text-align: left;
+    }
+    //---------------- POS
+
+    //---------------- BOTTOM
+    .col-xsm-bottom {
+        @include rem(margin-bottom, 30px);
+	}
+
+    .col-xsm-bottom-min {
+        @include rem(margin-bottom, 15px);
+	}
+
+    .col-xsm-bottom-micro {
+        @include rem(margin-bottom, 10px);
+    }
+    //---------------- BOTTOM
+
+    //---------------- TOP
+    .col-xsm-top {
+        @include rem(margin-top, 30px);
+	}
+
+    .col-xsm-top-min {
+        @include rem(margin-top, 15px);
+	}
+
+    .col-xsm-top-micro {
+        @include rem(margin-top, 10px);
+    }
+
+    .col-xsm-top-0 {
+        margin-top: 0px;
+    }
+    //---------------- TOP
+
+    .col-xsm-padd-none {
+        padding: 0;
+    }
+
+    .col-xsm-separat-right-none {
+        &:after {
+            display: none;
+        }
+    }
+}

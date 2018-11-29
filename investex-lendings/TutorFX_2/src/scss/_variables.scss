@@ -1,0 +1,76 @@
+$width-content-xl:                  1280px; //ПК 1200px
+$width-content-lg:                  1024px; //планшет 1024px
+$width-content-md:                  768px; //планшет 768px
+$width-content-sm:                  576px; //планшет 768px
+$width-content-xs:                  320px; //моб 320px
+
+$padd-desktop:                      70px; //отступы на ПК
+$padd-mobile:                       5%; //отступы на мобильных и планшетных экранах
+
+//--------------------------- ЦВЕТА BEGIN ----------------------------//
+$color-base:                   		#000000;
+
+$color-grey:                        #878787;
+$color-grey-light:                  #f8f8f8;
+$color-grey-dark:                   #323232;
+
+$color-yellow:                  	#ffb333;
+$color-yellow-light:                #ffe36a;
+
+$color-red:                  	    #e04a36;
+
+$color-turquoise:                  	#45acbd;
+//--------------------------- ЦВЕТА END ----------------------------//
+
+$bg-base:                           #fff;
+$bg-grey-light:                     $color-grey-light;
+$bg-grey-dark:                      $color-grey-dark;
+
+$color-border:                  	#e9e9e9;
+$color-border-form:                 lighten($color-grey,15%);
+$color-placeholder:                 darken($color-grey,25%);
+$color-shadow:                      $color-grey-light;
+
+$font-size-base:                    100%;
+$line-height-base:                  normal;
+
+
+//--------------------------- ССЫЛКИ BEGIN ----------------------------//
+$link-color:                        $color-red;
+$link-hover-color:                  darken($link-color, 7%);
+$link-decoration:                   underline;
+$link-hover-decoration:             underline;
+//--------------------------- ССЫЛКИ END ----------------------------//
+
+
+//--------------------------- ШРИФТЫ BEGIN ----------------------------//
+$font-path:                         "../fonts/";
+
+$font-name-regular:                 "HelveticaRegular/HelveticaRegular";
+$font-name-helvetica-bold:          "HelveticaBold/HelveticaBold";
+$font-name-bold:                	"DinCondensed/DinCondensed";
+$font-name-ping-regular:            "PingFangSCRegular/PingFangSCRegular";
+$font-name-ping-bold:               "PingFangSCBold/PingFangSCBold";
+
+$font-name-icons:                	"Fontello/fontello"; //Иконочные шрифты
+
+$font-reg:                          "Helvetica";
+$font-bold:                         "DinCondensed";
+$font-ping-reg:                     "PingFangSC-Regular";
+$font-ping-semibold:                "PingFangSC-Semibold";
+$font-icons:                        "Fontello";
+
+$font-family-base:                  $font-ping-reg, $font-reg, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//--------------------------- ШРИФТЫ END ----------------------------//
+
+$img-path:                          "../img/";
+$svg-path:                          "../img/svg/";
+
+$sprite-file:                       "sprite.png";
+$sprite-file2x:                     "sprite@2x.png";
+
+$SCREEN_RETINA_pixel_ratio:         1.25;
+$SCREEN_RETINA_resolution:          120;
+
+$border-radius-base:                3px;
+$transition-speed:                  .4s;

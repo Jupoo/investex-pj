@@ -1,0 +1,70 @@
+.services {
+
+
+	&__list {
+
+	}
+
+	&__item {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 20px);
+		@include rem(margin, 12px 0px);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		& span {
+			@include rem(font-size, 20px);
+			@include rem(line-height, 20px);
+			@include rem(margin-right, 17px);
+			color: $color-green;
+		}
+	}
+
+	&__title {
+		@include rem(font-size, 28px);
+		@include rem(line-height, 34px);
+		@include rem(padding-bottom, 50px);
+		font-family: $font-black;
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.services {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.services {
+
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.services {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.services {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.services {
+
+	}
+}

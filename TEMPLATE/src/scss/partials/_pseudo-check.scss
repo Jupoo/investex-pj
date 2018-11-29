@@ -1,0 +1,88 @@
+.pseudo-check {
+	display: flex;
+	cursor: pointer;
+
+    &__check {
+		border: solid 1px $color-red;
+        background: $color-red;
+        border-radius: $border-radius-base;
+		@include rem(font-size, 10px);
+		@include rem(line-height, 24px);
+        @include rem(height, 26px);
+        @include rem(width, 26px);
+        @include rem(min-width, 26px);
+		text-align: center;
+		transition: all $transition-speed ease;
+	}
+
+	/*&:hover &__check, &.check &__check {
+		border: solid 1px darken($color-border-form,10%);
+	}*/
+
+	&__check-icon {
+		display: none;
+		vertical-align: top;
+	  	background: url("#{$img-path}svg/path-4.svg") no-repeat center;
+	}
+
+	&.check &__check-icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__text {
+		@include rem(margin-left, 10px);
+		@include rem(font-size, 13px);
+        @include rem(line-height, 20px);
+        @include rem(padding-top, 3px);
+	  	font-family: $font-reg;
+	  	font-weight: normal;
+		color: #fff;
+		transition: all $transition-speed ease;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 100%;
+
+	  	& a {
+		  	color: #fff;
+		}
+	}
+
+	&:hover &__text {
+		color: darken(#fff,30%);
+	}
+
+	&__real {
+		display: none;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.pseudo-check {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.pseudo-check {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.pseudo-check {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.pseudo-check {
+
+	}
+}

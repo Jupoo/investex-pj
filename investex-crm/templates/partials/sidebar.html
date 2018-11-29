@@ -1,0 +1,57 @@
+{% load static %}
+
+<aside class="sidebar">
+	<div class="sidebar__logo"><img src="{% static 'img/svg/logo.svg' %}" alt="Investex Logo" /></div>
+	<nav class="sidebar__menu">
+		<ul>
+			<li class="sidebar__menu-item {% if 'dashboard' in request.path %}sidebar--menu-active{% endif %}">
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+            </li>
+			<li class="sidebar__menu-item {% if 'clients' in request.path %}sidebar--menu-active{% endif %}">
+                <a href="{% url 'clients' %}">Clients</a><div class="sidebar__menu-add icon--add"></div>
+            </li>
+			<li class="sidebar__menu-item {% if 'ib' in request.path %}sidebar--menu-active{% endif %}">
+                <a href="">IBs</a><div class="sidebar__menu-add icon--add"></div>
+            </li>
+			<li class="sidebar__menu-item {% if 'events' in request.path %}sidebar--menu-active{% endif %}">
+                <a href="{% url 'events' %}">Events</a>
+            </li>
+		</ul>
+	</nav>
+	<div class="sidebar__footer">
+		<div class="sidebar__info">
+			<div class="sidebar__info-title">AUM:</div>
+			<div class="sidebar__info-count">$300,000</div>
+		</div>
+		<div class="sidebar__info">
+			<div class="sidebar__info-title"><span class="sidebar__info-text">Bonus:</span><div class="sidebar__info-icon icon--info"></div></div>
+			<div class="sidebar__info-count">$1,500</div>
+		</div>
+		<div class="sidebar__account">
+			<div class="sidebar__account-top">
+				<div class="sidebar__account-name">Alexander Constantinides</div>
+				<div class="sidebar__account-photo"><img src="{% static 'img/files/account-photo.jpg' %}" alt="" /></div>
+			</div>
+			<div class="sidebar__account-status">Account manager</div>
+			<div class="sidebar__account-rating">
+				<div class="rating-stars">
+					<div class="rating-stars__empty">
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+					</div>
+					<div class="rating-stars__active" style="width: 60%">
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+						<span class="icon--star"></span>
+					</div>
+				</div>
+			</div>
+			<a href="" class="sidebar__account-logout">Log out</a>
+		</div>
+	</div>
+</aside>

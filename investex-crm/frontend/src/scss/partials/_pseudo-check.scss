@@ -1,0 +1,91 @@
+.pseudo-check {
+	display: flex;
+	cursor: pointer;
+
+	&--disabled {
+		opacity: 0.5;
+	}
+
+    &__check {
+		border: solid 1px $color-border-form;
+        background: none;
+        border-radius: $border-radius-base;
+		@include rem(font-size, 10px);
+		@include rem(line-height, 18px);
+        @include rem(height, 20px);
+        @include rem(width, 20px);
+        @include rem(min-width, 20px);
+		text-align: center;
+		transition: all $transition-speed ease;
+	}
+
+	&:hover &__check, &.check &__check {
+		border: solid 1px darken($color-border-form,10%);
+	}
+
+	&__check-icon {
+		display: none;
+		vertical-align: top;
+		color: $color-red;
+	}
+
+	&.check &__check-icon {
+		display: inline-block;
+	}
+
+	&__text {
+		@include rem(margin-left, 10px);
+		@include rem(font-size, 15px);
+        @include rem(line-height, 20px);
+		color: $color-grey-dark;
+		transition: all $transition-speed ease;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	&:hover &__text {
+		color: darken($color-grey-dark,10%);
+	}
+
+	&__real {
+		display: none;
+	}
+
+	&__count {
+		color: $color-grey;
+		@include rem(font-size, 11px);
+		position: relative;
+    	top: -5px;
+    	left: 5px;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.pseudo-check {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.pseudo-check {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.pseudo-check {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.pseudo-check {
+
+	}
+}

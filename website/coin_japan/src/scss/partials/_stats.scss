@@ -1,0 +1,209 @@
+.stats {
+	display: flex;
+	background: #fff;
+	@include shadow();
+	@include rem(height, 84px);
+	@include rem(padding, 0px 30px);
+	margin-bottom: 2px;
+	align-items: center;
+	transition: all $transition-speed ease;
+
+	&--header {
+		@include rem(height, 34px);
+	}
+
+	&.ancLinks:hover {
+		background: lighten($color-grey-extralight,1.5%);
+		color: #000;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__icon {
+		flex-grow: 0;
+		@include rem(width, 44px);
+		@include rem(min-width, 44px);
+		text-align: center;
+	}
+
+	&--icon-btc {
+		color: $color-blue;
+		@include rem(font-size, 44px);
+	}
+
+	&--icon-litecoin {
+		color: $color-yellow;
+		@include rem(font-size, 44px);
+	}
+
+	&--icon-ethereum {
+		color: $color-blue;
+		@include rem(font-size, 56px);
+	}
+
+	&--icon-bitcoin-cash {
+		color: $color-red;
+		@include rem(font-size, 44px);
+	}
+
+	&--icon-forex {
+		@include rem(width, 52px);
+		@include rem(min-width, 52px);
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__name {
+		font-family: $font-medium;
+		flex-grow: 1;
+		@include rem(width, 70px);
+		@include rem(min-width, 70px);
+		@include rem(padding, 0px 20px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 36px);
+		color: $color-grey-dark;
+		white-space: nowrap;
+	}
+
+	&__price {
+        font-family: $font-heavy;
+		font-weight: bold;
+        flex-grow: 2;
+        @include rem(width, 110px);
+        @include rem(min-width, 110px);
+        @include rem(padding, 0px 20px);
+        @include rem(font-size, 20px);
+        @include rem(line-height, 36px);
+        white-space: nowrap;
+	}
+
+	&--header &__price, &--header &__profit, &--header &__name {
+		color: $color-blue;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 34px);
+	}
+
+	&__profit {
+        font-family: $font-heavy;
+		font-weight: bold;
+        flex-grow: 1;
+        @include rem(width, 90px);
+        @include rem(min-width, 90px);
+        @include rem(padding, 0px 20px);
+        @include rem(font-size, 16px);
+        @include rem(line-height, 36px);
+        white-space: nowrap;
+        color: $color-blue;
+	}
+
+	&--red {
+		color: $color-red;
+	}
+
+	&--info {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 16px);
+		color: $color-grey-light;
+		background: none;
+		box-shadow: none;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.stats {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.stats {
+		@include rem(padding, 0px 20px);
+
+		&__icon {
+			@include rem(width, 36px);
+			@include rem(min-width, 36px);
+		}
+
+        &--icon-forex {
+            @include rem(width, 40px);
+            @include rem(min-width, 40px);
+            @include rem(padding-right, 5px);
+        }
+
+		&--icon-btc {
+			color: $color-blue;
+			@include rem(font-size, 36px);
+		}
+
+		&--icon-litecoin {
+			color: $color-yellow;
+			@include rem(font-size, 36px);
+		}
+
+		&--icon-ethereum {
+			color: $color-blue;
+			@include rem(font-size, 46px);
+		}
+
+		&--icon-bitcoin-cash {
+			color: $color-red;
+			@include rem(font-size, 36px);
+		}
+
+		&__name {
+			@include rem(width, 48px);
+			@include rem(min-width, 48px);
+			@include rem(padding, 0px 5px);
+			@include rem(padding-left, 13px);
+			@include rem(font-size, 14px);
+		}
+
+		&__price {
+			@include rem(width, 95px);
+			@include rem(min-width, 95px);
+			@include rem(padding, 0px 5px);
+			@include rem(font-size, 19px);
+			flex-grow: 1;
+		}
+
+		&__profit {
+			@include rem(width, 86px);
+			@include rem(min-width, 86px);
+			@include rem(padding-left, 5px);
+			@include rem(font-size, 14px);
+			flex-grow: 0;
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.stats {
+		&__profit {
+			flex-grow: 1;
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.stats {
+		@include rem(padding, 0px 15px);
+
+		&__profit {
+			flex-grow: 0;
+		}
+
+        &--icon-forex {
+            @include rem(width, 31px);
+            @include rem(min-width, 31px);
+        }
+	}
+}

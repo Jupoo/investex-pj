@@ -1,0 +1,239 @@
+.table {
+	border: solid 1px $color-grey-light;
+
+	&__line {
+		display: flex;
+		//justify-content: space-between;
+		border-bottom: solid 1px $color-grey-light;
+		width: 100%;
+	}
+
+	&__body &__line:last-child {
+		border: none;
+	}
+
+	&--header {
+		border-bottom: solid 2px $color-grey-light;
+	}
+
+	&__body {
+
+	}
+
+	&__cell {
+		@include rem(padding-left, 15px);
+		@include rem(font-size, 13px);
+		@include rem(line-height, 40px);
+		color: #000;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		flex-grow: 2;
+
+		&:last-child {
+			@include rem(padding, 0px 15px);
+		}
+	}
+
+	&--header &__cell {
+		display: block;
+		@include rem(font-size, 11px);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $color-grey;
+	}
+
+	&--cell-header-left {
+		@include rem(font-size, 11px);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $color-grey;
+		border-right: solid 1px $color-grey-light;
+	}
+
+	&--cell-1 {
+		@include rem(width, 70px);
+		@include rem(min-width, 70px);
+	}
+
+	&--cell-2 {
+		@include rem(width, 140px);
+		@include rem(min-width, 140px);
+	}
+
+	&--cell-3 {
+		@include rem(width, 170px);
+		@include rem(min-width, 170px);
+	}
+
+	&--cell-4 {
+		@include rem(width, 128px);
+		@include rem(min-width, 128px);
+	}
+
+	&--cell-5 {
+		@include rem(width, 58px);
+		@include rem(min-width, 58px);
+		flex-grow: 1;
+	}
+
+	&--cell-6 {
+		@include rem(width, 58px);
+		@include rem(min-width, 58px);
+		flex-grow: 1;
+	}
+
+	&--cell-7 {
+		@include rem(width, 58px);
+		@include rem(min-width, 58px);
+		flex-grow: 1;
+	}
+
+	&--cell-8 {
+		@include rem(width, 100px);
+		@include rem(min-width, 100px);
+		flex-grow: 1;
+	}
+
+	&--cell-9 {
+		@include rem(width, 115px);
+		@include rem(min-width, 115px);
+		flex-grow: 1;
+	}
+
+	&--cell-ev1 {
+		@include rem(width, 200px);
+		@include rem(min-width, 200px);
+		flex-grow: 0;
+	}
+
+	&--cell-ev2 {
+		@include rem(width, 200px);
+		@include rem(min-width, 200px);
+		flex-grow: 0;
+	}
+
+	&--cell-ev3 {
+		@include rem(width, 200px);
+		@include rem(min-width, 200px);
+		flex-grow: 0;
+	}
+
+	&--cell-evlat1 {
+		@include rem(width, 135px);
+		@include rem(min-width, 135px);
+	}
+
+	&--cell-evlat2 {
+		@include rem(width, 135px);
+		@include rem(min-width, 135px);
+	}
+
+	&--cell-evlat3 {
+		@include rem(width, 158px);
+		@include rem(min-width, 158px);
+	}
+
+	&--cell-stat1 {
+		@include rem(width, 140px);
+		@include rem(min-width, 140px);
+	}
+
+	&--cell-stat2 {
+		@include rem(width, 150px);
+		@include rem(min-width, 150px);
+	}
+
+	&--cell-stat3 {
+		@include rem(width, 150px);
+		@include rem(min-width, 150px);
+	}
+
+	&__cell-icon {
+		font-size: 4px;
+		@include rem(line-height, 40px);
+		@include rem(margin-left, 10px);
+		display: inline-block;
+		vertical-align: top;
+		color: $color-grey;
+		transition: all $transition-speed ease;
+	}
+
+	&--sort {
+		transition: all $transition-speed ease;
+
+		&:hover {
+			color: $color-blue;
+		}
+	}
+
+	&--header &--sort-up {
+		color: $color-grey-dark;
+	}
+
+	&--header &--sort-up &__cell-icon {
+		color: $color-grey-dark;
+	}
+
+	&--sort:hover {
+		color: $color-blue;
+	}
+
+	&--sort:hover &__cell-icon {
+		color: $color-blue;
+	}
+
+	&__check {
+		@include rem(width, 20px);
+		@include rem(height, 20px);
+		@include rem(margin-top, 10px);
+		background: $color-blue;
+		border-radius: 2px;
+		text-align: center;
+
+		& span {
+			@include rem(font-size, 8px);
+			@include rem(line-height, 20px);
+			color: #fff;
+		}
+	}
+
+	&--check-switchedoff {
+		background: #fff;
+		border: solid 2px $color-grey-light;
+		border-radius: 3px;
+
+		& span {
+			display: none;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.table {
+		
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.table {
+		
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.table {
+		
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.table {
+
+	}
+}

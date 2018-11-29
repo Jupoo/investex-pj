@@ -1,0 +1,161 @@
+.form {
+	font-family: $font-reg;
+    @include rem(padding, 50px);
+    border-radius: $border-radius-base;
+    background: $color-blue no-repeat url("#{$img-path}svg/pattern-form.svg") right top;
+
+	&__wrap {
+        @include rem(padding-bottom, 20px);
+	}
+
+    &__header {
+        @include rem(font-size, 34px);
+        @include rem(line-height, 38px);
+        @include rem(margin-bottom, 50px);
+        color: #fff;
+        font-weight: bold;
+    }
+
+	&__field {
+		@include rem(margin-bottom, 10px);
+		position: relative;
+	}
+
+	&__field .intl-tel-input .selected-flag {
+		color: rgba(255,255,255,0.7);
+	}
+
+	&__input {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 18px);
+		@include rem(height, 54px);
+		@include rem(padding, 0px 20px);
+		width: 100%;
+		border: solid 2px rgba(#000, 0);
+		background: rgba(#000, 0.2);
+		display: block;
+		border-radius: $border-radius-base;
+		color: rgba(#fff, 0.7);
+		transition: all $transition-speed ease;
+
+		&:-moz-placeholder {
+			color: $color-placeholder;
+			line-height: normal;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-placeholder;
+			line-height: normal;
+		}
+
+		&:focus {
+            border: solid 2px rgba(#000, 0.1);
+            color: rgba(#fff, 0.85);
+		}
+	}
+
+	&__input-wrap.err &__input {
+		border: solid 2px $color-red;
+	}
+
+	input:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0px 1000px #391390 inset !important; /* Цвет фона */
+		-webkit-text-fill-color: rgba(#fff, 0.7) !important; /* цвет текста */
+		color: rgba(#fff, 0.7); /* цвет текста */
+		border: solid 2px #391390;
+	}
+
+	input:-webkit-autofill:focus {
+		-webkit-text-fill-color: rgba(#fff, 0.85) !important; /* цвет текста */
+		color: rgba(#fff, 0.85); /* цвет текста */
+		border: solid 2px #331181;
+	}
+
+	&__tooltip {
+		color: rgba(#fff, 0.7);
+		@include rem(font-size, 14px);
+		@include rem(line-height, 14px);
+		@include rem(margin-top, 5px);
+	}
+
+	/*
+	&__textarea {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 20px);
+		@include rem(height, 102px);
+		@include rem(padding, 10px);
+		width: 100%;
+		border: solid 1px $color-border-form;
+		background: #fff;
+		display: block;
+		font-family: $font-reg;
+		border-radius: $border-radius-base;
+		color: $color-base;
+		resize: none;
+
+		&::-webkit-input-placeholder {
+			line-height: 19px;
+			color: $color-placeholder;
+		}
+
+		&:focus {
+			border: solid 1px darken($color-border-form, 10%);
+			color: $color-base;
+		}
+
+		&.err {
+			border: solid 1px $color-red;
+		}
+	}
+	*/
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.form {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.form {
+        @include rem(padding, 30px);
+
+        &__header {
+            @include rem(font-size, 30px);
+            @include rem(line-height, 34px);
+            @include rem(margin-bottom, 30px);
+        }
+
+        &__input {
+            @include rem(font-size, 14px);
+            @include rem(line-height, 14px);
+            @include rem(height, 34px);
+            @include rem(padding, 0px 13px);
+        }
+
+        &__wrap {
+            @include rem(padding-bottom, 15px);
+        }
+
+		&__field .intl-tel-input .flag-container {
+			height: 34px;
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.form {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.form {
+        @include rem(padding, 30px 15px);
+	}
+}

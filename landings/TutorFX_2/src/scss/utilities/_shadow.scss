@@ -1,0 +1,7 @@
+.shadow {
+  @include shadow();
+}
+
+.shadow-path {
+  @include shadow-path();
+}

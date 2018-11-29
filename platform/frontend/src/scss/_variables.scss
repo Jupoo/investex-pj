@@ -1,0 +1,74 @@
+$width-content-xl:                  1200px; //ПК
+$width-content-lg:                  992px; //планшет
+$width-content-md:                  768px; //планшет
+$width-content-sm:                  576px; //планшет
+$width-content-xs:                  320px; //моб
+
+$padd-desktop:                      20px; //отступы на ПК
+$padd-mobile:                       20px; //отступы на мобильных и планшетных экранах
+
+//--------------------------- ЦВЕТА BEGIN ----------------------------//
+$color-base:                   		#000000;
+
+$color-green:                       #28dc96;
+$color-blue-dark:                   #0a0f32;
+$color-grey:                        #7e7e7e;
+$color-grey-light:                  #bcbcbc;
+$color-grey-lighter:                #f5f5f5;
+$color-grey-extralight:             #fafafa;
+
+//--------------------------- ЦВЕТА END ----------------------------//
+
+$bg-base:                           #ffffff;
+
+$color-border:                  	$color-grey-lighter;
+$color-border-form:                 $color-grey-lighter;
+$color-disabled:                    $color-grey-lighter;
+$color-bg-form:                     $color-grey-extralight;
+$color-text-form:                   #000;
+$color-placeholder:                 $color-grey-light;
+$color-shadow:                      $color-grey-light;
+
+$font-size-base:                    100%;
+$line-height-base:                  normal;
+
+
+//--------------------------- ССЫЛКИ BEGIN ----------------------------//
+$link-color:                        $color-base;
+$link-hover-color:                  $color-green;
+$link-decoration:                   none;
+$link-hover-decoration:             none;
+//--------------------------- ССЫЛКИ END ----------------------------//
+
+
+//--------------------------- ШРИФТЫ BEGIN ----------------------------//
+$font-path:                         "../fonts/";
+
+$font-name-regular:                 "LatoRegular/Lato-Regular";
+$font-name-bold:                	"LatoBold/Lato-Bold";
+$font-name-black:                	"LatoBlack/Lato-Black";
+$font-name-semibold:                "LatoSemibold/Lato-Semibold";
+
+$font-name-icons:                	"Fontello/fontello"; //Иконочные шрифты
+
+$font-reg:                          "Lato";
+$font-black:                        "LatoBlack";
+$font-semibold:                     "LatoSemibold";
+$font-icons:                        "Fontello";
+
+$font-family-base:                  $font-reg, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//--------------------------- ШРИФТЫ END ----------------------------//
+
+$img-path:                          "../img/";
+$svg-path:                          "../img/svg/";
+
+$sprite-file:                       "sprite.png";
+$sprite-file2x:                     "sprite@2x.png";
+
+$SCREEN_RETINA_pixel_ratio:         1.25;
+$SCREEN_RETINA_resolution:          120;
+
+$border-radius-base:                2px;
+$border-radius-btn:                 4px;
+$border-radius-card:                10px;
+$transition-speed:                  .4s;

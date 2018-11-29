@@ -1,0 +1,73 @@
+.main {
+	&__body {
+		display: flex;
+		align-items: center;
+	}
+
+	&__l {
+		flex-grow: 1;
+	}
+
+	&__r {
+		flex-grow: 0;
+		@include rem(width, 470px);
+		@include rem(min-width, 470px);
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		@include rem(font-size, 52px);
+		@include rem(line-height, 62px);
+		font-family: $font-black;
+	}
+
+	&__text {
+		@include rem(font-size, 22px);
+		@include rem(line-height, 34px);
+		@include rem(padding-top, 35px);
+		color: $color-grey;
+	}
+
+	&__btns {
+		@include rem(padding-top, 50px);
+		@include rem(max-width, 600px);
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.main {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.main {
+
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.main {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.main {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.main {
+
+	}
+}

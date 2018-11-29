@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+<section>
+	<div class="page__content-inner">
+    	<div class="heading">Clients</div>
+
+		<div class="row row--padd-max">
+			<div class="col-6">
+				<nav class="menu-filter">
+					<ul class="menu-filter__wrap">
+						<li class="menu-filter__item menu-filter--current"><a href="">New</a></li>
+						<li class="menu-filter__item"><a href="">Contacted</a></li>
+						<li class="menu-filter__item"><a href="">Funded</a></li>
+						<li class="menu-filter__item"><a href="">Unfunded</a></li>
+						<li class="menu-filter__item"><a href="">VIP</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-6 pos-right">
+				<nav class="menu-filter">
+					<ul class="menu-filter__wrap">
+						<li class="menu-filter__item menu-filter--current"><a href="">Today</a></li>
+						<li class="menu-filter__item"><a href="">Yesterday</a></li>
+						<li class="menu-filter__item"><a href="">This week</a></li>
+						<li class="menu-filter__item"><a href="">This month</a></li>
+						<li class="menu-filter__item"><a href="">Custom</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		{% render_table table %}
+	</div>
+</section>
+{% endblock %}

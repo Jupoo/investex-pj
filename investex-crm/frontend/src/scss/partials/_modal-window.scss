@@ -1,0 +1,81 @@
+.modal-window {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	&__wrap {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+	}
+
+	&__close {
+		@include rem(padding, 25px 0px);
+		@include rem(width, 360px);
+		@include rem(min-width, 80px);
+		background: rgba(#000,0.7);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		text-align: right;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+	}
+
+	&__close-btn {
+		color: $color-grey;
+		cursor: pointer;
+		@include rem(padding-right, 20px);
+		transition: all $transition-speed ease;
+	}
+
+	&__close:hover &__close-btn {
+		color: #fff;
+	}
+
+	&__close-icon {
+		@include rem(margin-bottom, 8px);
+		& .icon--close-window {
+			@include rem(font-size, 30px);
+		}
+
+		& .icon--esc {
+			@include rem(font-size, 13px);
+		}
+	}
+
+	&__body {
+		background: #fff;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.modal-window {
+		
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.modal-window {
+		
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.modal-window {
+		
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.modal-window {
+
+	}
+}

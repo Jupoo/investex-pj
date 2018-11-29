@@ -1,0 +1,26 @@
+[
+  {
+    "model": "clients.channel",
+    "pk": 1,
+    "fields": {
+      "order": 0,
+      "title": "Call"
+    }
+  },
+  {
+    "model": "clients.channel",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "title": "Email"
+    }
+  },
+  {
+    "model": "clients.channel",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "title": "WeChat"
+    }
+  }
+]

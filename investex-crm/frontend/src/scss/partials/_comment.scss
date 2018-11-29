@@ -1,0 +1,127 @@
+.comment {
+	display: flex;
+	@include rem(padding, 20px 0px);
+	border-bottom: solid 1px $color-border;
+
+	&:last-child {
+		border: none;
+	}
+
+	&__tag {
+		@include rem(width, 100px);
+		@include rem(min-width, 100px);
+		flex-grow: 0;
+	}
+
+	&__body {
+		flex-grow: 1;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+	}
+
+	&__top {
+		display: flex;
+		color: $color-grey;
+	}
+
+	&__date {
+		flex-grow: 0;
+	}
+
+	&__name {
+		@include rem(margin-left, 10px);
+		flex-grow: 1;
+	}
+
+	&__controls {
+		flex-grow: 0;
+	}
+
+	&__control {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 18px);
+		@include rem(margin-left, 10px);
+		color: $color-grey-light;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			color: $color-grey;
+		}
+
+		& > icon--edit {
+
+		}
+
+		& > icon--delete {
+
+		}
+	}
+
+	&__text {
+		@include rem(margin-top, 6px);
+	}
+
+	&__files {
+		@include rem(margin-top, 6px);
+	}
+
+	&__doc {
+		color: $color-blue;
+		@include rem(margin-right, 12px);
+	}
+
+	&__doc-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 18px);
+	}
+
+	&__doc-name {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 5px);
+	}
+
+	&__doc:hover {
+		color: darken($color-blue,15%);
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.comment {
+
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.comment {
+		
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.comment {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.comment {
+		
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.comment {
+
+	}
+}

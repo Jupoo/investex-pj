@@ -1,0 +1,50 @@
+.page-footer {
+	border-top: solid 1px $color-border;
+	@include rem(padding, 50px 0px);
+
+	&__text {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 16px);
+		color: $color-grey-light;
+
+		& p {
+			@include rem(margin, 5px 0px);
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.page-footer {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.page-footer {
+        &__text {
+            @include rem(font-size, 10px);
+            @include rem(line-height, 14px);
+        }
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.page-footer {
+        @include rem(padding, 40px 0px);
+
+        &__text {
+            @include rem(margin-top, 30px);
+        }
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.page-footer {
+
+	}
+}

@@ -1,0 +1,74 @@
+$width-content-xl:                  1200px; //ПК
+$width-content-lg:                  992px; //планшет
+$width-content-md:                  768px; //планшет
+$width-content-sm:                  576px; //планшет
+$width-content-xs:                  320px; //моб
+
+$padd-desktop:                      50px; //отступы на ПК
+$padd-mobile:                       4%; //отступы на мобильных и планшетных экранах
+
+//--------------------------- ЦВЕТА BEGIN ----------------------------//
+$color-base:                   		#000000;
+
+$color-grey:                        #7d7d7d;
+$color-grey-light:                  #a2a2a2;
+$color-grey-dark:                   #6b6b6b;
+$color-grey-extralight:             #f8f8f8;
+
+$color-red:                  	    #e2086e;
+$color-blue:                  	    #4718b4;
+$color-yellow:                  	#ffca00;
+//--------------------------- ЦВЕТА END ----------------------------//
+
+$bg-base:                           #fff;
+$bg-grey-light:                     $color-grey-extralight;
+$bg-grey-dark:                      $color-grey-dark;
+
+$color-border:                  	#e1e1e1;
+$color-border-form:                 #e1e1e1;
+$color-bg-form:                     $color-grey-extralight;
+$color-text-form:                   $color-grey-dark;
+$color-placeholder:                 rgba(#fff, 0.3);
+$color-shadow:                      $color-grey-light;
+
+$font-size-base:                    100%;
+$line-height-base:                  normal;
+
+
+//--------------------------- ССЫЛКИ BEGIN ----------------------------//
+$link-color:                        $color-base;
+$link-hover-color:                  $color-blue;
+$link-decoration:                   none;
+$link-hover-decoration:             none;
+//--------------------------- ССЫЛКИ END ----------------------------//
+
+
+//--------------------------- ШРИФТЫ BEGIN ----------------------------//
+$font-path:                         "../fonts/";
+
+$font-name-regular:                 "AvenirBook/AvenirLT-Book";
+$font-name-bold:                	"AvenirBlack/AvenirLT-Black";
+$font-name-medium:                	"AvenirMedium/AvenirLT-Medium";
+$font-name-heavy:                	"AvenirHeavy/AvenirLT-Heavy";
+
+$font-name-icons:                	"Fontello/fontello"; //Иконочные шрифты
+
+$font-reg:                          "AvenirBook";
+$font-medium:                       "AvenirMedium";
+$font-heavy:                        "AvenirHeavy";
+$font-icons:                        "Fontello";
+
+$font-family-base:                  $font-reg, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//--------------------------- ШРИФТЫ END ----------------------------//
+
+$img-path:                          "../img/";
+$svg-path:                          "../img/svg/";
+
+$sprite-file:                       "sprite.png";
+$sprite-file2x:                     "sprite@2x.png";
+
+$SCREEN_RETINA_pixel_ratio:         1.25;
+$SCREEN_RETINA_resolution:          120;
+
+$border-radius-base:                2px;
+$transition-speed:                  .4s;

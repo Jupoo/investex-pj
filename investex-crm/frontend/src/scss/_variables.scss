@@ -1,0 +1,77 @@
+$width-content-xl:                  1200px; //ПК
+$width-content-lg:                  992px; //планшет
+$width-content-md:                  768px; //планшет
+$width-content-sm:                  576px; //планшет
+$width-content-xs:                  320px; //моб
+
+$padd-desktop:                      50px; //отступы на ПК
+$padd-mobile:                       4%; //отступы на мобильных и планшетных экранах
+
+//--------------------------- ЦВЕТА BEGIN ----------------------------//
+$color-base:                   		#000000;
+
+$color-blue:                        #3d89e0;
+$color-blue-dark:                   #39437c;
+$color-blue-light:                  #737aa2;
+
+$color-grey:                        #9c9c9c;
+$color-grey-light:                  #e8e8e8;
+$color-grey-lighter:                #f4f4f4;
+$color-grey-dark:                   #626262;
+$color-grey-extralight:             #f9f9f9;
+
+$color-red:                  	    #ed655f;
+//--------------------------- ЦВЕТА END ----------------------------//
+
+$bg-base:                           #fff;
+$bg-grey-light:                     $color-grey-light;
+$bg-grey-dark:                      $color-grey-dark;
+
+$color-border:                  	$color-grey-light;
+$color-border-form:                 $color-grey-light;
+$color-bg-form:                     $color-grey-extralight;
+$color-text-form:                   $color-grey-dark;
+$color-placeholder:                 $color-grey;
+$color-shadow:                      $color-grey-light;
+
+$font-size-base:                    100%;
+$line-height-base:                  normal;
+
+
+//--------------------------- ССЫЛКИ BEGIN ----------------------------//
+$link-color:                        $color-base;
+$link-hover-color:                  $color-blue;
+$link-decoration:                   none;
+$link-hover-decoration:             none;
+//--------------------------- ССЫЛКИ END ----------------------------//
+
+
+//--------------------------- ШРИФТЫ BEGIN ----------------------------//
+$font-path:                         "../fonts/";
+
+$font-name-regular:                 "SourceSansProRegular/SourceSansPro-Regular";
+$font-name-bold:                	"SourceSansProBold/SourceSansPro-Bold";
+$font-name-light:                	"SourceSansProLight/SourceSansPro-Light";
+
+$font-name-icons:                	"Fontello/fontello"; //Иконочные шрифты
+
+$font-reg:                          "SourceSansPro";
+$font-light:                        "SourceSansProLight";
+$font-icons:                        "Fontello";
+
+$font-family-base:                  $font-reg, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//--------------------------- ШРИФТЫ END ----------------------------//
+
+$img-path:                          "../img/";
+$svg-path:                          "../img/svg/";
+
+$sprite-file:                       "sprite.png";
+$sprite-file2x:                     "sprite@2x.png";
+
+$SCREEN_RETINA_pixel_ratio:         1.25;
+$SCREEN_RETINA_resolution:          120;
+
+$border-radius-base:                5px;
+$border-radius-btn:                 2px;
+$border-radius-input:               3px;
+$transition-speed:                  .4s;

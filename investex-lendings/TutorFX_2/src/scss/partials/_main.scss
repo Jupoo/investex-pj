@@ -1,0 +1,98 @@
+.main {
+  	background: #be4731 url("#{$img-path}mainpic.jpg") no-repeat center top;
+	background-size: auto 100%;
+  	color: #fff;
+	@include rem(height, 635px);
+  	position: relative;
+
+ 	&__logo {
+	  	@include rem(width, 172px);
+	  	@include rem(height, 69px);
+	  	background: url("#{$img-path}logo.png") no-repeat 0 0;
+	}
+
+  	&__header-wrap {
+	  	position: absolute;
+	  	bottom: 0;
+	  	left: 0;
+	  	width: 100%;
+	}
+
+	&__header {
+		font-family: $font-ping-semibold;
+	  	@include rem(font-size, 49px);
+	  	@include rem(line-height, 68px);
+	  	text-shadow: 0 2px 20px rgba(93, 3, 3, 0.9);
+	  	@include rem(padding-left, 100px);
+	  	@include rem(margin-bottom, 110px);
+	}
+
+	&__header-sep {
+		display: block;
+	  	line-height: 0;
+	  	font-size: 0;
+	}
+}
+
+/*@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+	.main {
+		background-image: url("#{$img-path}mainpic@2x.jpg");
+		background-size: auto 100%;
+	}
+}*/
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.main {
+		&__logo {
+			background-image: url("#{$img-path}logo@3x.png");
+		  	background-size: 100%;
+		}
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.main {
+	  	@include rem(height, 600px);
+		background-image: url("#{$img-path}mainpic-mobile.jpg");
+		background-size: auto 100%;
+
+	  	&__header {
+		  	@include rem(margin-bottom, 100px);
+		  	@include rem(padding-left, 0px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.main {
+	  	@include rem(height, 450px);
+
+		&__header {
+			@include rem(font-size, 40px);
+			@include rem(line-height, 55px);
+		  	@include rem(margin-bottom, 70px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.main {
+		&__header {
+			@include rem(font-size, 35px);
+			@include rem(line-height, 50px);
+		}
+
+		&__header-sep {
+			display: inline;
+			line-height: normal;
+		}
+	}
+}

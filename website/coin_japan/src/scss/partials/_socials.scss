@@ -1,0 +1,53 @@
+.socials {
+  	text-align: right;
+
+  	&__item {
+	  	display: inline-block;
+	  	vertical-align: top;
+		@include rem(height, 40px);
+		@include rem(width, 40px);
+		@include rem(margin, 0px 3px);
+		background-repeat: no-repeat;
+	  	background-position: 0 0;
+		background-size: 100%;
+	}
+
+    &__icon {
+        @include rem(font-size, 40px);
+        color: $color-red;
+        transition: all $transition-speed ease;
+    }
+
+    &__item:hover &__icon {
+        color: darken($color-red,5%);
+    }
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.socials {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.socials {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.socials {
+		text-align: center;
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.socials {
+
+	}
+}

@@ -1,0 +1,35 @@
+.heading {
+	text-align: center;
+	@include rem(font-size, 30px);
+	@include rem(line-height, 38px);
+	@include rem(padding-bottom, 45px);
+	font-weight: bold;
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.heading {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.heading {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.heading {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.heading {
+
+	}
+}

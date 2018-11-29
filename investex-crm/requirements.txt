@@ -1,0 +1,10 @@
+Django==2.1.1
+django-ordered-model==2.1.0
+django-tables2==1.21.2
+django-filter==2.0.0
+raven
+argon2-cffi
+mysqlclient
+djangorestframework
+celery[redis]
+requests

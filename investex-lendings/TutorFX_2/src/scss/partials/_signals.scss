@@ -1,0 +1,37 @@
+.signals {
+  	background-image: url("#{$img-path}signals-desktop.jpg");
+  	background-position: center top;
+  	background-repeat: no-repeat;
+  	background-size: auto 100%;
+  	@include rem(height, 487px);
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.signals {
+	  	background-image: url("#{$img-path}signals-table1024.jpg");
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.signals {
+	 	 background-image: url("#{$img-path}signals-table768.jpg");
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.signals {
+	  	@include rem(height, 370px);
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.signals {
+		background-image: url("#{$img-path}signals-mobile.jpg");
+		@include rem(height, 201px);
+	}
+}

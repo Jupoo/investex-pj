@@ -1,0 +1,118 @@
+.advantage {
+	text-align: center;
+
+	&__icon {
+
+		& img {
+			@include rem(height, 135px);
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	&--icon-1 img {
+		@include rem(width, 123px);
+	}
+
+	&--icon-2 img {
+		@include rem(width, 151px);
+	}
+
+	&--icon-3 img {
+		@include rem(width, 102px);
+	}
+
+	&--icon-4 img {
+		@include rem(width, 87px);
+	}
+
+	&__title {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 25px);
+		@include rem(padding-top, 25px);
+		@include rem(min-height, 75px);
+		font-family: $font-heavy;
+	}
+
+	&__text {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(min-height, 60px);
+		color: $color-grey-dark;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.advantage {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.advantage {
+		&__title {
+			@include rem(font-size, 16px);
+			@include rem(line-height, 23px);
+			@include rem(min-height, 71px);
+		}
+
+		&__text {
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+			@include rem(min-height, 54px);
+		}
+
+		&__icon {
+			& img {
+				@include rem(height, 99px);
+			}
+		}
+
+		&--icon-1 img {
+			@include rem(width, 88px);
+		}
+
+		&--icon-2 img {
+			@include rem(width, 113px);
+		}
+
+		&--icon-3 img {
+			@include rem(width, 89px);
+		}
+
+		&--icon-4 img {
+			@include rem(width, 64px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.advantage {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.advantage {
+		&__icon {
+			& img {
+				height: auto;
+			}
+		}
+
+		&__title {
+			@include rem(padding-top, 30px);
+			min-height: 0;
+		}
+
+		&__text {
+			min-height: 0;
+			display: block;
+		}
+	}
+}
